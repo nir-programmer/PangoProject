@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class ParkingCalculatorArea1 extends ParkingCalculator {
 
-	private final int FEE = 10 ; 
+	private final int COST_PER_HOUR = 10 ; 
 	
-	
-	//Exeption !! 
+
 	@Override
 	public double Calculate(Date startParking, Date stopParking, int parkingAreaId)
 	{
@@ -18,13 +17,9 @@ public class ParkingCalculatorArea1 extends ParkingCalculator {
 		int end = stopParking.getHours();
 		int totalHours = end - start ;
 		
+	
 		
-		
-//		System.out.println(">>start = " + start);
-//		System.out.println(">>end = " + end);
-//		System.out.println(">>totalHours = " + totalHours);
-		
-		totalCost = totalHours * FEE;
+		totalCost = totalHours * COST_PER_HOUR;
 		
 		
 

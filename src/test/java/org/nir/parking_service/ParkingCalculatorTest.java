@@ -63,10 +63,10 @@ public class ParkingCalculatorTest {
 	public void Calculate_Area3()
     {
 		    var startParking = new Date(2021, 10, 6, 11, 0, 0);
-	        var stopParking = new Date(2021, 10, 6, 20, 30, 0);
+	        var stopParking = new Date(2021, 10, 6, 20, 0, 0);
 	        var parkingAreaId = 3;
 
-	        var expected = 10.0;
+	        var expected = 45;
 	        var actual = _target.Calculate(startParking,stopParking, parkingAreaId);
 	        assertEquals(expected, actual);
 	        System.out.println(">>actual = " + actual + " , expected = " + expected);

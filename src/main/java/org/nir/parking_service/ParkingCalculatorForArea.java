@@ -21,9 +21,7 @@ public abstract class ParkingCalculatorForArea
 	
 	
 	
-	/*
-	 * 
-	 */
+	
 	public int getTotalHours() 
 	{
 		
@@ -35,15 +33,12 @@ public abstract class ParkingCalculatorForArea
 	    double totalHours  = secondsDifference / 3600.0; 
 	    
 	    int totalFullHours = (int)totalHours;
-	    
-//	    System.out.println(">>totalHours() : totalHours = " + totalHours);
-//	    
-//	    System.out.println(">>totalHours() : totalFullHours = " + totalFullHours);
+
 	    
 	    if(totalHours > (int)totalHours) totalFullHours += 1;
 	    
 	    
-	    //System.out.println(">>totalHours() : totalFullHours = " + totalFullHours);
+	   
 		
 		return totalFullHours;
 
