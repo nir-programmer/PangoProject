@@ -6,6 +6,7 @@ public class ParkingCalculatorArea1 extends ParkingCalculator {
 
 	private final int COST_PER_HOUR = 10 ; 
 	
+	
 
 	@Override
 	public double Calculate(Date startParking, Date stopParking, int parkingAreaId)
