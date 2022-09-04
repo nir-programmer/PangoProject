@@ -1,0 +1,63 @@
+	You are required to design and develop Parking Calculator Service responsible to calculate parking costs.
+	
+	The entry point of service is ParkingCalculator class implements IParkingCalculator interface (see project Pango.New.Employe.Test)
+	
+	Method Calculate in ParkingCalculator calculates the cost of parking from startParking to stopParking according to parkingAreaId:
+	
+	 				decimal Calculate(DateTime startParking, DateTime stopParking, int parkingAreaId);
+	
+	
+	There are 3 parkingAreaId with different cost calculation rules:
+	
+	ParkingAreaId
+	 Description
+	1. 10 NIS for each hour or part of it
+	2. 5 NIS for each hour or part of it Or fixed price 20 NIS (the cheaper of them)
+	3.  Pay for parking from 8:00 to 20:00 - 5 NIS for each hour or part of it. After 20:00 until 8:00 tomorrow parking is free.
+	
+	 
+	    1. Think about design of ParkingCalculator Service (The solution should be flexible with the ability to add new parkingAreaId’s with different ways of calculation cost). 
+	    2. Implement ParkingCalculator Service.
+	    3. Implement Unit test (Basic test exists in project Pango.New.Employe.Test solution. Try to cover the maximum possible test cases).
+
+	    
+	    
+	*********************************************************************
+							TESTS
+	***************************************************************************************
+	
+	using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Pango.New.Employe.Task.Test
+{
+    // parkingArea 1 => 10 NIS for each hour or part of it
+    // parkingArea 2 => 5 NIS for each hour or part of it  Or fix price 20 NIS (the lesser of them)
+    // parkingArea 3 => Pay for parking from 8:00 to 20:00  - 5 NIS for each hour or part of it
+
+    [TestClass]
+    public class ParkingCalculatorTest
+    {
+        private ParkingCalculator _target;
+
+        [TestInitialize]
+        public void Init()
+        {
+            _target = new ParkingCalculator();
+
+        }
+
+        [TestMethod]
+        public void Calculate_Area1()
+        {
+            var startParking = new DateTime(2021, 10, 6, 11, 0, 0);
+            var stopParking = new DateTime(2021, 10, 6, 12, 30, 0);
+            var parkingAreaId = 1;
+
+            var expected = _target.Calculate(startParking, stopParking, parkingAreaId);
+
+            Assert.AreEqual(20.00, expected);
+        }
+    }
+}
+	
