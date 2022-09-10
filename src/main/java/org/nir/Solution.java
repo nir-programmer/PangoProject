@@ -3,8 +3,8 @@ package org.nir;
 import java.util.Date;
 
 import org.nir.parking_service.ParkingCalculator;
-import org.nir.parking_service.ParkingCalculatorForArea;
-import org.nir.parking_service.ParkingCalculatorForAreaFactory;
+import org.nir.parking_service.ParkingCalculatorForAreaStrategy;
+import org.nir.parking_service.ParkingCalculatorForAreaStrategyFactory;
 import org.nir.parking_service.ParkingTimeException;
 
 
@@ -12,35 +12,37 @@ public class Solution {
 
 	public static void main(String[] args) throws ParkingTimeException {
 		
-		Date start1 = new Date(2021, 10, 6, 8, 0, 0); 
 		
-		Date end1 = new Date(2021, 10, 6, 20, 30, 0); 
 		
-		Date start2 = new Date(2021, 10, 6, 8, 0, 0); 
-		
-		Date end2 = new Date(2021, 10, 6, 11, 30, 0); 
-		
-		int parkingAreaId1 = 1;
-		int parkingAreaId2 = 2;
+//		Date start1 = new Date(2021, 10, 6, 8, 0, 0); 
+//		
+//		Date end1 = new Date(2021, 10, 6, 20, 30, 0); 
+//		
+//		Date start2 = new Date(2021, 10, 6, 8, 0, 0); 
+//		
+//		Date end2 = new Date(2021, 10, 6, 11, 30, 0); 
+//		
+//		int parkingAreaId1 = 1;
+//		int parkingAreaId2 = 2;
 		
 
 		//////////////////////////////////////////////////////////////////////////////
 		/////////////////////////////////////Test area 2: 
 		
-		ParkingCalculator parkingCalculatorForArea1 = new ParkingCalculator();
-		ParkingCalculator parkingCalculatorForArea2 = new ParkingCalculator();
-		
-		
-		
-		
-		
-		
-		double cost1 = parkingCalculatorForArea1.Calculate(start1, end1, parkingAreaId1);
-		double cost2 = parkingCalculatorForArea2.Calculate(start2, end2, parkingAreaId2);
-	
-		System.out.println(">>Cost1: " + cost1);
-		
-		System.out.println(">>Cost2: " + cost2);
+//		ParkingCalculator parkingCalculatorForArea1 = new ParkingCalculator();
+//		ParkingCalculator parkingCalculatorForArea2 = new ParkingCalculator();
+//		
+//		
+//		
+//		
+//		
+//		
+//		double cost1 = parkingCalculatorForArea1.Calculate(start1, end1, parkingAreaId1);
+//		double cost2 = parkingCalculatorForArea2.Calculate(start2, end2, parkingAreaId2);
+//	
+//		System.out.println(">>Cost1: " + cost1);
+//		
+//		System.out.println(">>Cost2: " + cost2);
 
 		
 
